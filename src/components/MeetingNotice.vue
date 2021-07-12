@@ -29,15 +29,7 @@
         <dt class="col-sm-4 col-lg-3">Date/time</dt>
         <dd class="col-sm-8 col-lg-9">
           <strong class="mark">
-            {{
-              new Date(meeting.StartTime).toLocaleString('en-US', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: 'numeric',
-              })
-            }}
+            {{ meetingDate }}
             to
             {{ meeting.EndTime }}
           </strong>
@@ -111,6 +103,8 @@
           :href="meeting.PublicLink"
           target="_blank"
           class="btn btn-outline-primary"
+          :title="`View meeting - ${meetingDate}`"
+          :aria-label="`View meeting - ${meetingDate}`"
         >
           <!--  -->
           <svg
@@ -148,6 +142,18 @@ export default {
 
   setup() {
     return {}
+  },
+
+  computed: {
+    meetingDate() {
+      return new Date(this.meeting.StartTime).toLocaleString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+      })
+    },
   },
 }
 </script>
