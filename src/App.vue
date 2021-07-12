@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <main class="container-fluid">
     <div v-if="meetings.loading" class="text-center my-5">
       <div class="spinner-border" role="status">
         <span class="visually-hidden">Loading...</span>
