@@ -27,7 +27,7 @@
           {{
             meeting.Location || 'N/A - Virtual meeting - no physical location'
           }}
-          <small v-if="meeting.PhysicalLocation" class="fw-bold">
+          <small v-if="meeting.ForCommitteeMembersOnly" class="fw-bold">
             (for committee members only, no general public admitted)
           </small>
         </dd>
