@@ -47,7 +47,7 @@
           For more information, including any questions before or after the
           public meeting, contact <strong>{{ meeting.ContactName }}</strong> at
           <strong>{{ meeting.ContactPhone }}</strong> or by email at
-          <a href="mailto:procurement@hcflgov.net">procurement@hcflgov.net</a>.
+          <a href="mailto:procurement@hcfl.gov">procurement@hcfl.gov</a>.
         </dd>
 
         <template v-if="meeting.OptionalMeetingNotice">
